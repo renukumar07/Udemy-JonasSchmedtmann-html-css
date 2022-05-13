@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pagination</title>
+    <style>
+      /*
+      SPACING SYSTEM (px)
+      2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+      FONT SIZE SYSTEM (px)
+      10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+      */
+      /*
+      MAIN COLOR: #087f5b
+      GREY COLOR: #343a40
+      */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        color: #343a40;
+        line-height: 1;
+        display: flex;
+        justify-content: center;
+      }
+      .pagination{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-top: 100px;
+      }
+      .left-icon, .right-icon{
+        height: 24px;
+        width: 24px;
+        
+        border-radius: 50%;
+        stroke: #087f5b;
+      }
+      .left-icon:hover, .right-icon:hover{
+        /* fill: #087f5b; */
+        stroke: #fff;
+      }
+      .num{
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .num:hover{
+        cursor: pointer;
+        background-color: #087f5b;
+        color: #fff;
+        
+      }
+      .num.num--selected{
+        border: 1px solid #087f5b;
+        border-radius: 50%;
+        background-color: #087f5b;
+        color: #fff;
+      }
+      .iconhover{
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #087f5b;
+        border-radius: 50%;
+      }
+      .iconhover:hover{
+        border-radius: 50%;
+        background-color: #087f5b;
+      }
+      .iconhover:hover .left-icon,.iconhover:hover .right-icon{
+        stroke: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pagination">
+      <a class="iconhover"><svg xmlns="http://www.w3.org/2000/svg" class="left-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg></a>
+      <a class="num">1</a>
+      <a class="num">2</a>
+      <a class="num num--selected">3</a>
+      <a class="num">4</a>
+      <a class="num">5</a>
+      <a class="num">6</a>
+      <a class=>...</a>
+      <a class="num">23</a>
+      <a class="iconhover"><svg xmlns="http://www.w3.org/2000/svg" class="right-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg></a>
+    </div>
+  </body>
+</html>
